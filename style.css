@@ -2,6 +2,12 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Passion+One:wght@400;700;900&family=Sriracha&display=swap');
 
+:root {
+    --font-title: "Passion One", sans-serif;
+    --font-cordel: "Sriracha", cursive;
+    --font-default: Verdana, Geneva, Tahoma, sans-serif;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -10,6 +16,7 @@
 html, body {
     min-height: 100vh;
     background-color: darkgray;
+    font-family: var(--font-default);
 }
 
 header {
@@ -19,8 +26,14 @@ header {
     padding: 20px;
 }
 
-header >h1 {
+header > h1 {
+    font-family: var(--font-title);
     font-variant: small-caps;
+    font-size: clamp(3rem, 10vw, 6rem);
+}
+
+header > p {
+    font-size: clamp(0.8rem, 3vw, 1.5rem);
 }
 
 header a, footer a {
@@ -35,7 +48,9 @@ header a:hover, footer a:hover {
 
 section {
     padding: 10vh 30px;
-    line-height: 2rem;
+    line-height: 2;
+    font-family: var(--font-cordel);
+    font-size: clamp(1rem, 3vw, 2rem);
 }
 
 section.normal {
@@ -55,7 +70,8 @@ section.imagem > p {
 
 footer {
     background-color: black;
-    padding: 30px;
+    padding: clamp(10px, 4%, 30px) 10px;
     text-align: center;
     color: white;
+    font-size: clamp(0.4rem, 1.2vw, 1rem);
 }
