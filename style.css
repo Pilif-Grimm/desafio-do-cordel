@@ -20,10 +20,10 @@ html, body {
 }
 
 header {
-    background-color: black;
+    background: linear-gradient(90deg, #000000, #1a1a1a);
     color: white;
     text-align: center;
-    padding: 20px;
+    padding: clamp(20px, 3%, 40px);
 }
 
 header > h1 {
@@ -58,14 +58,31 @@ section.normal {
     color: black;
 }
 
+section.normal > p {
+    padding: 0.5em 1em;
+}
+
 section.imagem {
-    background-color: gray;
     color: white;
+    box-shadow: inset 6px 6px 12px 0px rgba(0, 0, 0, 0.22);
+    background: gray right center / cover fixed;
 }
 
 section.imagem > p {
-    width: 400px;
-    background-color: rgba(0, 0, 0, 0.2);
+    display: inline-block;
+    padding: 0.5em 1em;
+    background-color: rgba(0, 0, 0, 0.25);
+    
+    text-shadow: 1px 1px 1px black;
+    border-radius: .5em 0;
+}
+
+section#img01 {
+    background-image: url(images/background001.jpg);
+}
+
+section#img02 {
+    background-image: url(images/background002.jpg);
 }
 
 footer {
